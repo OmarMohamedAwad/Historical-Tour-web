@@ -1,0 +1,516 @@
+
+body
+{
+  background-color: #f5f5fa;
+
+}
+
+/* side nav start */
+
+.carousel {
+    margin-top: 3px;
+}
+
+#main 
+{
+    transition: margin-left .5s;
+}
+
+/* for scroll */
+
+.sidenav::-webkit-scrollbar{
+    width: 7px;
+    border-radius: 5px;
+}
+
+.sidenav::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+
+.sidenav::-webkit-scrollbar-thumb
+{
+    background-color: #FCC23E;
+    border-radius: 5px;
+} 
+
+/* end scroll */
+
+.sidenav
+{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: scroll ;
+
+}
+
+.srchnav input[type=text] 
+{
+
+    margin-bottom: 30px; 
+    font-weight: 500;
+    width: 249px;
+}
+
+
+    /*  display: inline-block;
+    position: fixed;
+    background-color: #6A6A67;
+    color: #fff;
+    width: 250px;
+    height:100vh; /*100%*/
+    /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+*/
+
+.sidebar-header
+{ 
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: #333 ;
+    height: 110px;
+
+}
+
+.sidebar-header > h3
+{
+font-size: 26px;
+    margin-left: 25px;
+    padding-top: 35px;
+    color: white;
+}
+
+
+
+.sidenav ul li a 
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block; 
+    font-family: 'Overlock SC', cursive;
+
+}
+
+
+.sidenav ul li a:hover
+{
+
+    color: #FCC23E;
+    background: #fff; 
+
+}
+
+
+
+.sidenav ul li.active > a, a[aria-expanded="true"]
+    {
+    color: #fff;
+    background: #333;
+    }
+
+ul ul a 
+{
+    font-size: 0.9em ;
+    padding-left: 30px !important;
+    color: white;
+    background: #3B3B3B;
+}
+
+.govdown
+{
+    float: right;
+    color: #DDD;
+}
+
+
+/*end side nav */
+
+/*slider*/
+
+.placescaption
+{
+ 
+  padding-bottom: 10px;
+    margin-bottom: 0;
+    background-color:transparent;
+
+}
+
+.carousel-indicators li {
+    border-radius:50%;
+    height:10px;
+    width:10px;
+    background-color:#e0a800;
+}
+
+
+/* start available time and rat section */
+
+    .availa
+
+    {
+     border-radius: 10px;
+    background-image:url('../image/pouplar/pharwall.jpg');
+    background-position: center;
+ background-size: cover; 
+background-repeat: no-repeat;
+    width: 90%;
+    }
+
+    .avail {
+    text-align:center;
+        float: left;
+        width: 33%;
+        padding: 10px;
+        height: 300px; 
+    }
+
+.allavail
+{
+ color: #ddd;
+
+}
+ 
+
+    .opac
+    {
+      background-color:rgba(00,00,00,.7);
+        padding:10px;
+        padding-top: 40px;
+        border-radius:5px;
+        height:100%;
+
+    }
+
+.icons
+{
+
+
+
+}
+
+.forhover:hover
+{ 
+    color: #f7b700;
+  transition: 1s;
+}
+
+ 
+
+
+
+    @media screen and (max-width: 1500px) {
+
+    .availa {
+            width: 90%;
+               text-align: center;
+        }
+
+        .avail {
+            width: 100%;
+    text-align: center;
+        }
+
+    .rating
+        {
+    text-align: center;
+    width: 100%;
+
+       }
+    }
+
+
+
+
+
+
+/* end available time and rat section */
+
+
+
+/****** Style Star Rating Widget *****/
+
+
+    fieldset, label { margin: 0; padding: 0; }
+    h1 { font-size: 1.5em; margin: 10px; }
+
+
+    .rating { 
+
+      border: none;
+    }
+
+    .rating > input { display: none; } 
+    .rating > label:before { 
+      margin: 5px;
+      font-size: 2.1em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: " ★ ";
+    }
+
+    .rating > .half:before { 
+      content: "★";
+      position: absolute;
+    }
+
+    .rating > label { 
+      color: #ddd; 
+     float: right; 
+    }
+
+
+    .rating > input:checked ~ label, /* show gold star when clicked */
+    .rating:not(:checked) > label:hover, /* hover current star */
+    .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+    .rating > input:checked + label:hover, /* hover current star when changing rating */
+    .rating > input:checked ~ label:hover,
+    .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+    .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+
+/****** Style Star Rating Widget *****/
+
+
+
+
+
+
+/* start tab */
+
+    .tab-content
+    {
+        background-color: #f3f3f3;
+        height: 300px;
+        box-shadow: 0px 0px 2px  rgba(0, 0, 0, 0.2);
+        text-align: center;
+        align-items: center;
+    }
+
+    .tabss
+    {
+        width: 90%;
+        border-radius: 10px; 
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding: 10px;
+        background-color:#fafcfa;
+        padding-top: 10px;
+        padding-bottom:10px;
+        min-height: 400px; 
+        border: 1px solid #DDD;
+    }
+
+    .tab-pane
+    {
+        
+        font-size: 22px;
+    }
+
+
+
+/* End tab */
+
+
+/* available time table */
+    .modal-content
+    {
+        padding: 30px;
+        background-color: #f3f3f3;
+
+    }
+
+    table
+    {
+      margin: 0 auto;
+      max-width: 700px;
+      height: 100px;
+      background-color: #ccc;
+    }
+/* available time table */
+
+
+
+/*Start Section most places*/
+
+
+    .mostplaces
+    {
+         border: 1px solid #DDD;
+         width: 90%;
+         margin-top: 20px;
+         background-color: #fafcfa;
+         border-radius: 10px;
+         padding: 10px;
+         padding-top: 1px;
+    }
+
+    .places 
+    {
+        width:90%;
+        margin:80px auto 30px;
+    }
+
+    .places h3
+    {
+        margin-bottom:20px;
+    }
+
+    .places .row 
+    {
+        margin-bottom:20px;
+    }
+
+    .places .row > div 
+    {
+        background-color:#fff;
+        border-radius:5px;
+        padding:0;
+        box-shadow:3px 3px 10px #333;
+        color:#fff
+    }
+
+    .places .row > div:hover
+    {
+        cursor:pointer;
+    }
+
+    .places .row > div .container_place
+    {
+        background-color:rgba(00,00,00,.5);
+        padding:20px;
+        border-radius:5px;
+        height:100%;
+    }
+
+    .places .row .alazhar 
+    {
+        background-image:url(../image/pouplar/4.jpg);
+        background-position:center;
+    }
+
+    .places .row .citadelof-qaitbay
+    {
+        background-image:url(../image/pouplar/1.jpg);
+        background-position:center;
+    }
+
+    .places .row .pyramids
+    {
+        background-image:url(../image/pouplar/6.jpg);
+        background-position:center;
+    }
+
+    .places .row .slah
+    {
+        background-image:url(../image/pouplar/2.jpg);
+        background-position:center;
+    }
+
+    .places .row div img
+    {
+        max-width:100%;
+    border-radius: 100%;
+        margin:10px;
+    }
+
+    .places .row div p
+    {
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+
+    .places .row div button{
+        margin-bottom:5px;
+    }
+
+    /*most places */
+
+
+    @media screen and (max-width: 1100px) {
+        .places .row div button {
+            width: 75%;
+        }
+    }
+
+    .control .number-control:focus {
+        border:1px solid #F7B700;
+        box-shadow:none;
+        background-color:#F7B700;
+    }
+
+
+/*End Section most places*/
+
+
+
+@media (max-width:1000px)
+{
+.tab-content
+{
+background-color: #fff;
+height: auto;
+box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.2);
+text-align: center;
+align-items: center;
+}
+
+
+
+}
+
+
+
+
+
+
+@media (max-width:500px)
+{
+
+.opennav
+    {
+     display: none;
+    }
+.sidenav
+    {
+      display: none;
+   }
+
+#main
+    {
+   overflow-x: hidden;
+
+     margin-left:0px;
+     width: 100%;
+    }
+
+ 
+
+}
+
+@media (max-width:600px)
+{
+.rating { 
+  border: none;
+  float:none;
+  margin-right: 50px;
+}
+
+}
+
+
+
+
+

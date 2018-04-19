@@ -1,0 +1,117 @@
+﻿/*Start General*/
+
+
+/*End General*/
+
+/*Start Section Filter*/
+
+.filter-section {
+    margin:100px auto 40px;
+}
+
+.filter-section .row div select {
+    width:90%;
+    padding:5px;
+    border-radius:5px;
+    border:1px solid #F7B700;
+    cursor:pointer;
+}
+
+.filter-section .row div select:focus {
+  border-color: #F7B700;
+  outline: 0;
+}
+
+.filter-section .row div select option{
+    background-color:#fff;
+    border-radius:5px;
+}
+
+/*End Section Filter*/
+
+/*Start places*/
+
+.tourguides {
+    width:90%;
+    margin:30px auto 20px;
+    display: none;
+}
+
+.tourguides h3{
+    margin-bottom:20px;
+}
+
+.tourguides .row {
+    margin-bottom:20px;
+}
+
+.tourguides .row > div {
+    background-color:#fff;
+    border-radius:5px;
+    padding:0;
+    box-shadow:3px 3px 10px #333;
+    color:#fff
+}
+
+.tourguides .row > div:hover{
+    cursor:pointer;
+}
+
+.tourguides .row > div .container_tourguides{
+    background-color:rgba(00,00,00,.5);
+    padding:20px;
+    border-radius:5px;
+    height:100%;
+}
+
+.tourguides .row .tour-guide1 {
+    background-image:url('../image/tour guides/tourguide1.jpg');
+    background-position:center top ;
+}
+
+.tourguides .row .tour-guide2{
+    background-image:url('../image/tour guides/tourguide2.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+
+.tourguides .row .tour-guide3{
+    background-image:url('../image/tour guides/tourguide3.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+
+.tourguides .row .tour-guide4{
+    background-image:url('../image/tour guides/tourguide4.jpg');
+    background-position:center;
+}
+
+.tourguides .row div img{
+    max-width:100%;
+    margin:10px;
+}
+
+.tourguides .row div p{
+    margin-bottom:15px;
+    margin-top:10px;
+}
+
+.tourguides .row div button{
+    margin-bottom:5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .tourguides .row div button {
+        width: 75%;
+    }
+}
+
+.control .number-control:focus {
+    border:1px solid #F7B700;
+    box-shadow:none;
+    background-color:#F7B700;
+}
+
+/*End Places */
