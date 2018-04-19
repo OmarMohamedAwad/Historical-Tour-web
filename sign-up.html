@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/sign-book-style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<body>
+
+    <!--Start navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand logo" href="#">
+            <!--<img src="image/homeicon2.png" />-->
+            <span style="color:#F7B700">Historical</span><span>Tour</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link hover_effect" href="index.html" style="color:#333">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover_effect" href="places-item.html">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="hotel-item.html">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="tour-guides-item.html">Tour Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="contact-us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="">
+                    <i id="search-icon" onclick="search()" class="fas fa-search fa-lg search form-control-feedback"></i>
+                </div>
+            </form>
+            <ul class="user list-unstyled ">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="signin.html"><i class="fas fa-sign-in-alt mr-3"></i>Sign in</a>
+                        <a class="dropdown-item" href="sign-up.html"><i class="fas fa-user-plus mr-3"></i>Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-map-marker mr-3"></i>Planning</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+    <!-- start sign up -->
+
+    <section>
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-xs-10">
+                    <div class="signin-box ">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Sign up to our site</h3>
+                                <p>Enter your information to log on:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-user-plus"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom text-center">
+                            <form role="form" action="" method="post" class="login-form">
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="First name"> </div>
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="Last name"> </div>
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="Phone Number"> </div>
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="E-mail"> </div>
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="Age"> </div>
+                                <div class="form-group"> <input type="text" class="form-control" placeholder="Gender"> </div>
+
+
+
+                                <div class="form-group"> <input type="password" class="form-control" placeholder="Password"> </div>
+                                <div class="form-group"> <input type="password" class="form-control" placeholder="Re-type Password"> </div>
+
+                                <button type="button" class="butsign btn btn-dark"> Sign up </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--end sign up -->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

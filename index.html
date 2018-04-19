@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<body>
+
+    <!--Start navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand logo" href="#">
+        <!--<img src="image/homeicon2.png" />-->
+        <span style="color:#F7B700">Historical</span><span>Tour</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link hover_effect" href="index.html" style="color:#333">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover_effect" href="places-item.html">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="hotel-item.html">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="tour-guides-item.html">Tour Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="contact-us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="">
+                    <i id="search-icon" onclick="search()" class="fas fa-search fa-lg search form-control-feedback"></i>
+                </div>
+            </form>
+            <ul class="user list-unstyled ">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="signin.html"><i class="fas fa-sign-in-alt mr-3"></i>Sign in</a>
+                        <a class="dropdown-item" href="sign-up.html"><i class="fas fa-user-plus mr-3"></i>Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-map-marker mr-3"></i>Planning</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+    <!--Start Carousel-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" height="600" src="image/slider/slider4.jpg" alt="First slide">
+                <div class="carousel-caption hidden-xs">
+                    <h1>The historical places in Egypt</h1>
+                    <p>
+                        Together with the most engaging designer of today, we create original product of high quality, at great prices.
+                    </p>
+                    <button class="btn btn-warning">Discovery</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" height="600" src="image/slider/slider6.jpg" alt="Second slide">
+                <div class="carousel-caption hidden-xs">
+                    <h1>The historical places in Egypt</h1>
+                    <p>
+                        Together with the most engaging designer of today, we create original product of high quality, at great prices.
+                    </p>
+                    <button class="btn btn-warning">Discovery</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" height="600" src="image/slider/slider5.jpg" alt="Third slide">
+                <div class="carousel-caption hidden-xs">
+                    <h1>The historical places in Egypt</h1>
+                    <p>
+                        Together with the most engaging designer of today, we create original product of high quality, at great prices.
+                    </p>
+                    <button class="btn btn-warning">Discovery</button>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!--End Carousel-->
+
+    <!--Start Popular places -->
+
+    <section class="popular_places text-center">
+        <div class="container">
+            <a><h2>Popular Places</h2></a>
+            <div class="row text-center">
+                <div class="col-lg col-md-5 col-sm mr-5 mb-3">
+                    <img src="image/pouplar/pyramids.png"/>
+                    <h4>Egyptian pyramids</h4>
+                    <p>Location: Giza</p>
+                    <form action="places.html">
+                        <button class="btn btn-warning">See More</button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm mr-5 mb-3">
+                    <img src="image/pouplar/Slah-alden.png" />
+                    <h4>Citadel of Salah Eldin</h4>
+                    <p>Location: Cairo</p>
+                    <form action="places.html">
+                        <button class="btn btn-warning">See More</button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm mr-5 mb-3">
+                    <img src="image/pouplar/citadelof-qaitbay.png" />
+                    <h4>Citadel of Qaitbay</h4>
+                    <p>Location: Alexandria</p>
+                    <form action="places.html">
+                        <button class="btn btn-warning">See More</button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm mr-5 mb-3">
+                    <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                    <h4>Al Azhar Mosque</h4>
+                    <p>Location: Cairo</p>
+                    <form action="places.html">
+                        <button class="btn btn-warning">See More</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--End Popular places -->
+
+    <!--Start Popular Hotels -->
+
+    <section class="popular-hotels">
+        <button class="btn hotels-btn">Popular Hotels</button>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 mb-5">
+                    <a href="#">
+                        <img src="image/hotel/hotel1.jpg" class="hotel-img" />
+                        <h5>Sol Y Mar Sharks Bay Hotel</h5>
+                        <p>Location: Sharm El-Shaikh</p>
+                    </a>
+                    <form action="Hotels.html">
+                        <button class="btn btn-dark mb-5">See More</button>
+                    </form>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#">
+                                <img src="image/hotel/hotel3.jpg"/>
+                                <h6>Premier Le Reve Hotel</h6>
+                                <p>Location: Hurghada</p>
+                            </a>
+                            <form action="Hotels.html">
+                                <button class="btn btn-dark">See More</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#">
+                                <img src="image/hotel/hotel3.jpg" />
+                                <h6>Makadi Palace Hotel</h6>
+                                <p>Location: Hurghada</p>
+                            </a>
+                            <form action="Hotels.html">
+                                <button class="btn btn-dark">See More</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#">
+                                <img src="image/hotel/hotel4.jpg" />
+                                <h6>THE ROYAL SAVOY HOTEL</h6>
+                                <p>Loction: Sharm El-Shaikh</p>
+                            </a>
+                            <form action="Hotels.html">
+                                <button class="btn btn-dark">See More</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#">
+                                <img src="image/hotel/hotel5.jpg" />
+                                <h6>Sheraton Sharm Hotel</h6>
+                                <p>Loction: Sharm El-Shaikh</p>
+                            </a>
+                            <form action="Hotels.html">
+                                <button class="btn btn-dark">See More</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--End Popular Hotels -->
+
+    <!--Start Popular Tour Guide -->
+
+    <section class="tour-guide">
+        <div class="container">
+            <h3 class="text-center">Our Tour Guide</h3>
+            <div class="row text-center">
+                <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3">
+                    <img src="image/tour guides/tourguide1.png" />
+                    <p>
+                        Yasser Nagar
+                    </p>
+                    <p>
+                        Address: Cairo <br />
+                        Language : Arabic
+                    </p>
+                    <div class="media-tour">
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a><i class="fas fa-phone-square fa-2x"></i></a>
+                        <a><i class="fab fa-snapchat-square fa-2x"></i></a>
+                    </div>
+                    <form action="booking.html">
+                        <button class="btn btn-warning">See More</button>
+                        <button class="btn btn-warning ">Booking </button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3">
+                    <img src="image/tour guides/tourguide2.png" />
+                    <p>
+                       Saly Amke 
+                    </p>
+                    <p>
+                        Address: Alexandria <br />
+                        Language : English 
+                    </p>
+                    <div class="media-tour">
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a><i class="fas fa-phone-square fa-2x"></i></a>
+                        <a><i class="fab fa-snapchat-square fa-2x"></i></a>
+                    </div>
+                    <form action="booking.html">
+                        <button class="btn btn-warning">See More</button>
+                        <button class="btn btn-warning ">Booking </button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3">
+                    <img src="image/tour guides/tourguide3.png"/>
+                    <p>
+                        Ahmed Fettoh
+                    </p>
+                    <p>
+                        Address: Alexandria<br />
+                        Language : Arabic
+                    </p>
+                    <div class="media-tour">
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a><i class="fas fa-phone-square fa-2x"></i></a>
+                        <a><i class="fab fa-snapchat-square fa-2x"></i></a>
+                    </div>
+                    <form action="booking.html">
+                        <button class="btn btn-warning">See More</button>
+                        <button class="btn btn-warning ">Booking </button>
+                    </form>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3">
+                    <img src="image/tour guides/tourguide4.png"/>
+                    <p>
+                        Mary Kaled
+                    </p>
+                    <p>
+                        Address: Cairo<br />
+                        Language : Arabic
+                    </p>
+                    <div class="media-tour">
+                        <a><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a><i class="fas fa-phone-square fa-2x"></i></a>
+                        <a><i class="fab fa-snapchat-square fa-2x"></i></a>
+                    </div>
+                    <form action="booking.html">
+                        <button class="btn btn-warning">See More</button>
+                        <button class="btn btn-warning ">Booking </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--End Popular Tour Guide-->
+
+    <!--Start Footer-->
+
+    <footer>
+        <div class="back-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg col-md-5 col-sm-5 mr-5">
+                        <h3>CONTACT Us</h3>
+                        <ul class="list-unstyled">
+                            <li>2150 Virginia Street, New York, NY 60154</li>
+                            <li>555-555-5555</li>
+                            <li>name@company.com</li>
+                        </ul>
+                        <form action="contact-us.html">
+                            <button class="btn btn-warning">Contact Us</button>
+                        </form>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-5 quick_link">
+                        <h3>Quick Link</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="places-item.html">Places</a></li>
+                            <li><a href="hotel-item.html">Hotel</a></li>
+                            <li><a href="tour-guides-item.html">Tour Guides</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-12 beto-know">
+                        <h3>BE IN THE KNOW</h3>
+                        <p>Sign up for the latest news, tours and hotels</p>
+                        <input type="email" placeholder="Email" />
+                        <button class="btn btn-warning">Go</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="container last">
+                <p>© 2018, Historical team</p>
+                <ul class="list-unstyled text-center">
+                    <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                    <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                    <li><i class="fas fa-phone-square fa-2x"></i></li>
+                    <li><i class="fab fa-snapchat-square fa-2x"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--End Footer-->
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+</body>
+</html>

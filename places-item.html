@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/places-item-style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<body>
+
+    <!--Start navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand logo" href="#">
+            <!--<img src="image/homeicon2.png" />-->
+            <span style="color:#F7B700">Historical</span><span>Tour</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link hover_effect" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover_effect" href="places-item.html" style="color:#333">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="hotel-item.html">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="tour-guides-item.html">Tour Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="contact-us.html">Contact Us</a>
+                </li>
+
+            </ul>
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="">
+                    <i id="search-icon" onclick="search()" class="fas fa-search fa-lg search form-control-feedback"></i>
+                </div>
+            </form>
+            <ul class="user list-unstyled ">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="signin.html"><i class="fas fa-sign-in-alt mr-3"></i>Sign in</a>
+                        <a class="dropdown-item" href="sign-up.html"><i class="fas fa-user-plus mr-3"></i>Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fas fa-map-marker mr-3"></i>Planning</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+
+    <!--Start Section Filter-->
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg col-md-5 col-sm-5 mb-3">
+                    <select class="selectpicker" data-selected-text-format="count > 3">
+                        <option selected>Region</option>
+                        <option>Cairo</option>
+                        <option>Giza</option>
+                        <option>Mansoura</option>
+                        <option>Alexandria</option>
+                    </select>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mb-3">
+                    <select class="selectpicker" data-selected-text-format="count > 3">
+                        <option selected>Rating</option>
+                        <option>Up Down</option>
+                        <option>Down Up</option>
+                        <option>Rundom</option>
+                    </select>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mb-3">
+                    <select class="selectpicker" data-selected-text-format="count > 3">
+                        <option selected>Natural</option>
+                        <option>Religious</option>
+                        <option>Historical</option>
+                        <option>Natural</option>
+                    </select>
+                </div>
+
+                <div class="col-lg col-md-5 col-sm-5 mb-3">
+                    <select class="selectpicker" data-selected-text-format="count > 3">
+                        <option selected>Weather</option>
+                        <option>Cold</option>
+                        <option>Normal</option>
+                        <option>Hot</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--End Section Filter-->
+
+    <!--Start Section Plces-->
+
+    <div class="content" style="max-width:100%">
+        <section class="places">
+            <div class="container">
+
+                <div class="row text-center">
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="places">
+            <div class="container">
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="places">
+            <div class="container">
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                        <div class="container_place">
+                            <img src="image/pouplar/Al-Azhar-Mosque.png" />
+                            <p>
+                                Al Azhar Mosque <br />
+                            </p>
+                            <p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.7
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 citadelof-qaitbay">
+                        <div class="container_place">
+                            <img src="image/pouplar/citadelof-qaitbay.png" />
+                            <p>
+                                Citadelof Qaitbay <br />
+                            </p>
+                            <p>
+                                Location: Alexandria<br />
+                                Rate&ensp;&ensp;: 4.4
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 pyramids">
+                        <div class="container_place">
+                            <img src="image/pouplar/pyramids.png" />
+                            <p>
+                                Giza Pyramids <br />
+                            </p>
+                            <p>
+                                Location: Giza<br />
+                                Rate&ensp;&ensp;: 4.2
+                            </p>
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 slah">
+                        <div class="container_place">
+                            <img src="image/pouplar/Slah-alden.png" />
+                            <p>
+                                Slah Alden Mosque <br />
+                            </p>
+                            <!--<p>
+                                Location: Cairo<br />
+                                Rate&ensp;&ensp;: 4.6
+                            </p>-->
+
+                            <button class="btn btn-warning ">See More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="control">
+        <div class="container text-center">
+            <div class="arrow-section mb-3">
+                <button class="btn btn-primary arrow-control mr-3" onclick="plusDivs(-1)">❮ Prev</button>
+                <button class="btn btn-primary arrow-control" onclick="plusDivs(1)">Next ❯</button>
+            </div>
+            <button id="first" class="btn btn-dark number-control mr-2" onclick="currentDiv(1);">1</button>
+            <button id="second" class="btn btn-dark number-control mr-2" onclick="currentDiv(2);">2</button>
+            <button id="third" class="btn btn-dark number-control" onclick="currentDiv(3);">3</button>
+        </div>
+    </div>
+
+    <!--End Section Plces-->
+
+    <!--Start Footer-->
+
+    <footer>
+        <div class="back-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg col-md-5 col-sm-5 mr-5">
+                        <h3>CONTACT Us</h3>
+                        <ul class="list-unstyled">
+                            <li>2150 Virginia Street, New York, NY 60154</li>
+                            <li>555-555-5555</li>
+                            <li>name@company.com</li>
+                        </ul>
+                        <form action="contact-us.html">
+                            <button class="btn btn-warning">Contact Us</button>
+                        </form>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-5 quick_link">
+                        <h3>Quick Link</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="places-item.html">Places</a></li>
+                            <li><a href="hotel-item.html">Hotel</a></li>
+                            <li><a href="tour-guides-item.html">Tour Guides</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-12 beto-know">
+                        <h3>BE IN THE KNOW</h3>
+                        <p>Sign up for the latest news, tours and hotels</p>
+                        <input type="email" placeholder="Email" />
+                        <button class="btn btn-warning">Go</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="container last">
+                <p>© 2018, Historical team</p>
+                <ul class="list-unstyled text-center">
+                    <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                    <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                    <li><i class="fas fa-phone-square fa-2x"></i></li>
+                    <li><i class="fab fa-snapchat-square fa-2x"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--End Footer-->
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/places-item-js.js"></script>
+
+</body>
+</html>
