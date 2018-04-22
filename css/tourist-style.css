@@ -1,0 +1,236 @@
+﻿/*Start General*/
+
+body {
+    padding-top:75px;
+    background-color:#333;
+    font-family: 'Acme', sans-serif;
+}
+
+/*End General*/
+
+/* start header */
+
+header
+{
+    min-height:600px;
+    padding-left:30px;
+    padding-right:20px; 
+    margin-bottom:10px; 
+}
+
+header .info
+ {
+    width:100%;
+    padding-top:90px; 
+    color:#F7B700;
+ }
+
+header .info .personal{
+    padding-left:0 ;
+    margin-right: 50px;
+   
+}
+
+.vl 
+{
+   border-left: 1px solid #fff;
+   position:absolute;
+   overflow: hidden;
+   margin-left: 380px;
+   height:400px;
+   margin-top:-80px;
+}
+
+@media screen and (max-width: 1100px) {
+    .vl  {
+        display:none;
+    }
+}
+
+h3{color: white;}
+
+header .info .table_info {
+    width:100%; 
+    padding-top:40px;
+    padding-left:30px;
+    text-align:center;
+}
+
+.table {
+    width:80%; 
+}
+
+table
+{
+  color:white; 
+}
+
+header hr
+{
+    margin-top:40px; 
+    margin-bottom:20px 
+}
+
+.tabss{
+    margin-bottom:30px;
+    height:100%;
+}
+
+.nav-tabs {
+    border-bottom:none;
+    margin-bottom:30px;
+}
+
+header .statm p{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:0;
+    margin-top:10px;
+    width:100%; 
+}
+
+header .statm span{
+    font-size:18px; 
+} 
+
+header .instraction p
+{
+    margin-top:15px; 
+}
+
+header .statm
+{
+    color:#ddd;
+    margin-bottom:20px; 
+}
+
+.table td, .table th {
+    border-top:1px solid #F7B700;
+}
+
+header .statm:hover
+{
+    color:#F7B700;
+    cursor:pointer;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out; 
+    -moz-transition:all .5s ease-in-out; 
+    -o-transition:all .5s ease-in-out; 
+    
+}
+
+.nav-tabs .nav-link {
+    border:none;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active{
+    background-color: #333;
+    color:#F7B700;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active .statm{
+    color:#F7B700;
+}
+
+.featur {
+    margin-right:0;
+    margin-left:0;
+}
+
+.featur > div {
+    padding-left:0;
+    padding-right:0;
+    border-radius:5px;
+    color:#fff;
+    height:100%
+}
+
+.featur > div .container_place{
+    background-color:rgba(00,00,00,.5);
+    padding:20px;
+    border-radius:5px;
+    height:100%;
+}
+
+.featur .alazhar {
+    background-image:url(../image/pouplar/4.jpg);
+    background-position:center;
+}
+
+.featur .citadelof-qaitbay{
+    background-image:url(../image/pouplar/1.jpg);
+    background-position:center;
+}
+
+.featur .pyramids{
+    background-image:url(../image/pouplar/6.jpg);
+    background-position:center;
+}
+
+.featur .slah{
+    background-image:url(../image/pouplar/2.jpg);
+    background-position:center;
+}
+
+.featur > div .container_hotels{
+    background-color:rgba(00,00,00,.5);
+    padding:20px;
+    border-radius:5px;
+    height:100%;
+}
+
+.featur .hotel1 {
+    background-image:url(../image/hotel/hotel1.jpg);
+    background-position:center;
+}
+
+.featur .hotel2{
+    background-image:url(../image/hotel/hotel2.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+
+.featur .hotel3{
+    background-image:url(../image/hotel/hotel3.jpg);
+    background-position:center;
+}
+
+.featur .hotel4{
+    background-image:url(../image/hotel/hotel22.jpg);
+    background-position:center;
+}
+
+.featur > div .container_tourguides{
+    background-color:rgba(00,00,00,.5);
+    padding:20px;
+    border-radius:5px;
+    height:100%;
+}
+
+.featur .tour-guide1 {
+    background-image:url('../image/tour guides/tourguide1.jpg');
+    background-position:center top ;
+}
+
+.featur .tour-guide2{
+    background-image:url('../image/tour guides/tourguide2.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+
+.featur .tour-guide3{
+    background-image:url('../image/tour guides/tourguide3.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover
+}
+
+.featur .tour-guide4{
+    background-image:url('../image/tour guides/tourguide4.jpg');
+    background-position:center;
+}
+/* end header */
