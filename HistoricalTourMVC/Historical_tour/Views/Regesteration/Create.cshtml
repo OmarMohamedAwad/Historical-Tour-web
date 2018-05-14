@@ -1,0 +1,79 @@
+﻿@model Historical_tour.Models.User
+
+@{
+    Layout = "~/Views/Shared/_LayoutNav.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/sign-book-style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+</head>
+<body>
+
+    <!-- start sign up -->
+
+    <section style="margin: 110px auto 20px;">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-xs-10">
+                    <div class="signin-box ">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Sign up to our site</h3>
+                                <p>Enter your information to log on:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-user-plus"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom text-center">
+                            <form role="form" action="Create" method="post" class="login-form">
+                                <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="Full name" name="Name" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="User name" name="UserName" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" class="form-control datepicker" data-date-format="mm/dd/yyyy" placeholder="Birth of Date" name="Birthday" value="">
+                                </div>
+                                <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="Phone Number" name="Phone" value="">
+                                </div>
+                                <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="E-mail" name="Email" value="">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" name="Gender" value="">
+                                        
+                                        <option id="1" value="1">Male</option>
+                                        <option id="2" value="2">FeMale</option>
+                                    </select>
+                                   
+                                </div>
+                                <div class="form-group">
+                                     <input type="password" class="form-control" placeholder="Password" name="Password" value="">
+                                </div>
+                                
+                                <input type="submit" class="btn btn-warning" value="Save" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--end sign up -->
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>
+

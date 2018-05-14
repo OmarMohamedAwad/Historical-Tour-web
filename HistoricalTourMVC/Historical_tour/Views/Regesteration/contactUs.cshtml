@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutNav.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/contact-us-style.css" />
+</head>
+<body>
+
+    <!-- start contact sec -->
+
+    <section class="contact text-center">
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-xs-10 contact-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3>Contact us</h3>
+                            <p>We care about your opinion , tell us what you want:</p>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom contact-form text-center">
+                        <form role="form" action="contactUs" method="post">
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-email">Email</label>
+                                <input type="text" name="Email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-subject">Subject</label>
+                                <input type="text" name="Subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="contact-message">Message</label>
+                                <textarea name="Describtion" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-warning">Send message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contact sec -->
+
+</body>
+</html>

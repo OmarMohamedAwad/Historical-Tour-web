@@ -1,0 +1,331 @@
+﻿<!DOCTYPE HTML>
+
+@{
+    Layout = "~/Views/Shared/_LayoutNav.cshtml";
+}
+
+@model Historical_tour.Models.User
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Content/user-styl.css" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <aside class="" id="sideNav">
+        <a class="user-photo" href="#page-top">
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/image/tour guides/tourguide1.png" alt="">
+            </span>
+        </a>
+
+        <div class="user-item">
+            <ul class="user-nav">
+                <li class="user-element">
+                    <a class="user-link" href="#Basic Info">Basic Info</a>
+                </li>
+                <li class="user-element">
+                    <a class="user-link" href="#Recent peaking">Recent peaking</a>
+                </li>
+                <li class="user-element">
+                    <a class="user-link" href="#More Places">More Places</a>
+                </li>
+
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <div id="Basic Info">
+        <div id="main" style="margin-top:20px; position:absolute;">
+
+            <!-- One -->
+            <section id="one">
+                <header class="major">
+                    <h1 style="color:black;"><strong> Basic information </strong><br /></h1>
+                </header>
+                @{  DateTime curent = (DateTime)Model.Birthday;
+                    DateTime now = DateTime.Now;
+                    double s = now.Year - curent.Year;
+                    <h5><span style="color:#e0a800;"> Age: </span>  <span style="color:black;">@s years</span> </h5>
+                    <h5><span style="color:#e0a800;">Adress :</span><span style="color:black;">@Model.Address</span></h5>
+                    <h5><span style="color:#e0a800;">Tele:</span> <span style="color:black;">@Model.Phone</span></h5>
+                    <h5><span style="color:#e0a800;">E-mail:</span> <span style="color:black;"> @Model.Email</span></h5>
+                }
+                <ul class="actions">
+                    <li><a href="#" class="button">Learn More</a></li>
+                </ul>
+            </section>
+
+            <!-- Two -->
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Recent peaking')">Recent peaking</button>
+                <button class="tablinks" onclick="openCity(event, 'Recent Hotels')">Recent Hotels</button>
+                <button class="tablinks" onclick="openCity(event, 'Recent Guides')">Recent Guides</button>
+            </div>
+            <div id="Recent peaking" class="tabcontent">
+
+                <h1> <strong style="margin-left:22px; padding-bottom:50px; ">Recent peaking </strong><br /></h1>
+
+                <!--Start Section Plces-->
+
+                <div class="content" style="max-width:100%">
+                    <section class="places">
+                        <div class="container" style="padding-left:50px; padding-right:30px; ">
+
+                            <div class="row text-center">
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 alazhar">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Al-Azhar-Mosque.png" />
+                                        <p>
+                                            Al Azhar Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.7
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 citadelof-qaitbay">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/citadelof-qaitbay.png" />
+                                        <p>
+                                            Citadelof Qaitbay <br />
+                                        </p>
+                                        <p>
+                                            Location: Alexandria<br />
+                                            Rate&ensp;&ensp;: 4.4
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 pyramids">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/pyramids.png" />
+                                        <p>
+                                            Giza Pyramids <br />
+                                        </p>
+                                        <p>
+                                            Location: Giza<br />
+                                            Rate&ensp;&ensp;: 4.2
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 slah">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Slah-alden.png" />
+                                        <p>
+                                            Slah Alden Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.6
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <div id="Recent Hotels" class="tabcontent">
+                <h1> <strong style="margin-left:22px; padding-bottom:50px; ">Recent Hotels </strong><br /></h1>
+
+                <!--Start Section Plces-->
+
+                <div class="content" style="max-width:100%">
+                    <section class="places">
+                        <div class="container" style="padding-left:50px; padding-right:30px;">
+
+                            <div class="row text-center">
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 alazhar">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Al-Azhar-Mosque.png" />
+                                        <p>
+                                            Al Azhar Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.7
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 citadelof-qaitbay">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/citadelof-qaitbay.png" />
+                                        <p>
+                                            Citadelof Qaitbay <br />
+                                        </p>
+                                        <p>
+                                            Location: Alexandria<br />
+                                            Rate&ensp;&ensp;: 4.4
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 pyramids">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/pyramids.png" />
+                                        <p>
+                                            Giza Pyramids <br />
+                                        </p>
+                                        <p>
+                                            Location: Giza<br />
+                                            Rate&ensp;&ensp;: 4.2
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 slah">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Slah-alden.png" />
+                                        <p>
+                                            Slah Alden Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.6
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+            <div id="Recent Guides" class="tabcontent">
+                <h1> <strong style="margin-left:22px; padding-bottom:50px; ">Recent Guides </strong><br /></h1>
+
+                <!--Start Section Plces-->
+
+                <div class="content" style="max-width:100%">
+                    <section class="places">
+                        <div class="container" style="padding-left:50px; padding-right:30px;">
+
+                            <div class="row text-center">
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 alazhar">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Al-Azhar-Mosque.png" />
+                                        <p>
+                                            Al Azhar Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.7
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 col-xs-5 mr-3 mb-3 citadelof-qaitbay">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/citadelof-qaitbay.png" />
+                                        <p>
+                                            Citadelof Qaitbay <br />
+                                        </p>
+                                        <p>
+                                            Location: Alexandria<br />
+                                            Rate&ensp;&ensp;: 4.4
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 pyramids">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/pyramids.png" />
+                                        <p>
+                                            Giza Pyramids <br />
+                                        </p>
+                                        <p>
+                                            Location: Giza<br />
+                                            Rate&ensp;&ensp;: 4.2
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg col-md-5 col-sm-5 col-xs-5 mr-3 mb-3 slah">
+                                    <div class="container_place">
+                                        <img src="~/image/pouplar/Slah-alden.png" />
+                                        <p>
+                                            Slah Alden Mosque <br />
+                                        </p>
+                                        <p>
+                                            Location: Cairo<br />
+                                            Rate&ensp;&ensp;: 4.6
+                                        </p>
+
+                                        <button class="btn btn-warning ">See More</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+
+                <!--End Section Plces-->
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html>

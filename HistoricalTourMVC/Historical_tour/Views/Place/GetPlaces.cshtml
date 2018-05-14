@@ -1,0 +1,247 @@
+﻿@model  List<List<HistoricTour.Models.placeClass>>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/places-style.css" />
+</head>
+<body>
+    <!--Start Section Filter-->
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show ">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort Rate
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width: 100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="~/Place/Sorting/3">From Down To Up</a>
+                            <a class="dropdown-item" href="~/Place/Sorting/4">From Up To Down</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ID
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="~/Place//Sorting/1">From Down To Up</a>
+                            <a class="dropdown-item" href="~/Place//Sorting/2">From Up To Down</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Type
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="#">Single</a>
+                            <a class="dropdown-item" href="#">Family</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Weather
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="#">COLD</a>
+                            <a class="dropdown-item" href="#">HOT</a>
+                            <a class="dropdown-item" href="#">NORMAL</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--End Section Filter-->
+
+    <!--Start Section Plces-->
+
+    <div class="content">
+        <section class="places">
+            <div class="container">
+
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <div class="row text-center">
+
+                        @for (int j = 0; j < Model.ElementAt(i).Count; j++)
+                        {
+
+                            if (Model.ElementAt(i).Count == 4)
+                            {
+                                
+                                try
+                                {
+                                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar" style="background-image: url(@(Model.ElementAt(i).ElementAt(j).Images[0].Image))">
+                                        <div class="container_place">
+                                            <div>
+                                                <img src="@Model.ElementAt(i).ElementAt(j).Images[0].Image" />
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    @Model.ElementAt(i).ElementAt(j).Name <br/>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Location: @Model.ElementAt(i).ElementAt(j).Location<br />
+                                                    Rate&ensp;&ensp;: @Model.ElementAt(i).ElementAt(j).Rate
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-warning ">@Html.ActionLink("See More", "GetPlace" + "\\" + @Model.ElementAt(i).ElementAt(j).Id) </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                catch
+                                {
+                                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                                        <div class="container_place">
+                                            <img src="~/image/pouplar/Al-Azhar-Mosque.png" />
+                                            <p>
+                                                @Model.ElementAt(i).ElementAt(j).Name <br />
+                                            </p>
+                                            <p>
+                                                Location: @Model.ElementAt(i).ElementAt(j).Location<br />
+                                                Rate&ensp;&ensp;: @Model.ElementAt(i).ElementAt(j).Rate
+                                            </p>
+
+                                            <button class="btn btn-warning ">@Html.ActionLink("See More", "GetPlace" + "\\" + @Model.ElementAt(i).ElementAt(j).Id) </button>
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    <div class="col-lg-3 col-md-5 col-sm-5 mr-3 mb-3 alazhar" style="background-image: url(@(Model.ElementAt(i).ElementAt(j).Images[0].Image))">
+                                        <div class="container_place">
+                                            <div>
+                                                <img src="@Model.ElementAt(i).ElementAt(j).Images[0].Image" />
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    @Model.ElementAt(i).ElementAt(j).Name <br />
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Location: @Model.ElementAt(i).ElementAt(j).Location<br />
+                                                    Rate&ensp;&ensp;: @Model.ElementAt(i).ElementAt(j).Rate
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-warning ">@Html.ActionLink("See More", "GetPlace" + "\\" + @Model.ElementAt(i).ElementAt(j).Id) </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                catch
+                                {
+                                    <div class="col-lg-3 col-md-5 col-sm-5 mr-3 mb-3 alazhar">
+                                        <div class="container_place">
+                                            <img src="~/image/pouplar/Al-Azhar-Mosque.png" />
+                                            <p>
+                                                @Model.ElementAt(i).ElementAt(j).Name <br />
+                                            </p>
+                                            <p>
+                                                Location: @Model.ElementAt(i).ElementAt(j).Location<br />
+                                                Rate&ensp;&ensp;: @Model.ElementAt(i).ElementAt(j).Rate
+                                            </p>
+
+                                            <button class="btn btn-warning ">@Html.ActionLink("See More", "GetPlace" + "\\" + @Model.ElementAt(i).ElementAt(j).Id) </button>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        }
+
+                    </div>
+                }
+
+            </div>
+        </section>
+    </div>
+
+    @*<div class="control">
+            <div class="container text-center">
+                <div class="arrow-section mb-3">
+                    <button id="prevBtn" class="btn btn-primary arrow-control mr-3 " onclick="plusDivs(-1)">❮ Prev</button>
+                    <button id="nextvBtn" class="btn btn-primary arrow-control" onclick="plusDivs(1)">Next ❯</button>
+                </div>
+                <button id="first" class="btn btn-dark number-control mr-2" onclick="currentDiv(1);">1</button>
+                <button id="second" class="btn btn-dark number-control mr-2" onclick="currentDiv(2);">2</button>
+                <button id="third" class="btn btn-dark number-control" onclick="currentDiv(3);">3</button>
+            </div>
+        </div>*@
+
+    <!--End Section Plces-->
+
+    <script src="~/Scripts/places-item-js.js">
+
+    </script>
+
+    @*<script>
+
+
+
+        var arr = document.getElementsByClassName("alazhar");
+
+
+        for (var i = 0; i < arr.length; i++) {
+
+            }
+
+        var raw = @Html.Raw(Json.Encode(Model.Count));
+        var i;
+        for (i = 0; i < raw; i++) {
+
+            var j;
+            for (j = 0; j < 4; j++) {
+
+
+                var image = @Html.Raw(Json.Encode(Model.ElementAt(0).ElementAt(0).Images.ElementAt(0).Image));
+                arr[i].style.backgroundImage = "url("+image+")";
+                alert(model);
+
+
+
+            }
+
+        }
+
+    </script>*@
+
+
+
+</body>
+</html>

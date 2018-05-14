@@ -1,0 +1,475 @@
+﻿/*
+    First_color:color:#008BFF; 
+*/
+
+/*Start General Code*/
+
+body {
+    background-color:#f5f5fa;
+    padding-top:10px;
+}
+
+.container {
+    padding-left:10px;
+    padding-right:10px;
+}
+
+section {
+    margin:90px auto 100px;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease-in-out; 
+}
+
+/*End General Code*/
+
+/*Start Navbar*/
+
+.navbar {
+    padding: 0rem 2rem;
+    border-top: 5px solid #F7B700;
+    opacity:0.97;
+    background-color: #fff;
+}
+
+.navbar-light .navbar-brand{
+    padding: 0.5rem;
+}
+
+.navbar .logo img{
+    margin-right:5px;
+}
+
+.navbar .logo span{
+    margin-top:2px;
+    font-size:26px;
+}
+
+.navbar-nav {
+    margin:auto;
+}
+
+@media (max-width: 1100px) {
+    .navbar-expand-lg .navbar-nav {
+        width:70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        width:100%;
+    }
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link.disabled{
+    color:#F7B700;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    transition:background-color 2s ease-in-out;
+}
+
+/*start hover effect*/
+
+.hover_effect,.user .dropdown-menu .dropdown-item{
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ .hover_effect:before,.user .dropdown-menu .dropdown-item:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom:2px solid #F7B700;
+    color:#333;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 600ms ease-out;
+    transition: 600ms ease-out;
+}
+
+.hover_effect:hover:before,.user .dropdown-menu .dropdown-item:hover:before{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+}
+
+/*end hover effect*/
+
+.search-form {
+    width:20%;
+}
+
+.search-form i.search{
+    position:relative;
+    top:-25px;
+    left:4px;
+    color:#333;
+}
+
+.search-form .form-group {
+    float: right !important;
+    transition: all 2s, border-radius 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 12px;
+}
+
+.search-form .form-group input.form-control {
+    padding:2px 0px 2px 30px;
+    border: 0 none;
+    background: transparent;
+    display:block;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .search-form {
+        float: right;
+        width:40%;
+        display:inline-block;
+        margin-top:4px;
+    }
+    .user {
+        width:30%;
+        display:inline-block;
+        margin-top:11px;
+    }
+}
+
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+    width: 90%;
+    border-radius: 4px;
+}
+
+.search-form .form-group span.form-control-feedback {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #3596e0;
+    left: initial;
+    font-size: 14px;
+}
+
+.user {
+    margin-bottom:0rem;
+}
+
+.user li i{
+    margin-left:5px;
+    color:#333;
+    z-index:1;
+    margin-top:-2px;   
+}
+
+.user li i:hover {
+    transition:all 3s ease-in-out;
+    cursor:pointer;
+    transform:scale(1.2,1.2);
+}
+
+.user .dropdown-menu {
+    min-width:7rem;
+    left:-35px;
+    padding:10px 5px;
+}
+
+/*.user .dropdown-menu .dropdown-item:hover {
+}in top*/
+
+.user .dropdown-menu .dropdown-item:hover {
+    background-color:#fff
+}
+
+.user .dropdown-menu .dropdown-item i{
+    color:#F7B700;
+}
+
+.user .dropdown-toggle::after {
+    width:11px;
+    height:10px;
+    color:#000;
+}
+
+/*End Navbar*/
+
+/*Start Carousl*/
+
+.carousel {
+    margin-top:70px;
+}
+
+.carousel-caption {
+    padding-bottom: 30px;
+    margin-bottom: 200px;
+    background-color: rgba(3,3,3,.3);
+}
+
+.carousel-indicators li {
+    border-radius:50%;
+    height:10px;
+    width:10px;
+    background-color:#e0a800
+}
+
+/*End Carousl*/
+
+/*Start Section popular places*/
+
+.popular_places {
+    background-color:#fafcfa;
+    width:90%;
+    padding:30px 10px 30px 50px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+.popular_places .row >div{
+    padding:30px;
+    border-radius:10px;
+    background-color:#fff;
+    border:1px solid #F7B700;
+}
+
+.popular_places .row img {
+    max-width: 85%;
+    margin: 10px;
+    margin-bottom: 20px; 
+    height: 140px;
+    border-radius: 50%;
+}
+
+.popular_places h2 {
+    margin-bottom:40px;
+    color:#F7B700;
+    cursor:pointer;
+}
+
+/*End Section popular places*/
+
+/*Start Section popular hotels*/
+
+.popular-hotels {
+    background-color:#fff;
+    width:90%;
+    margin:auto;
+    margin-bottom:60px;
+    padding:20px 10px;
+    border:2px solid #F7B700;
+}
+
+.popular-hotels .row img{
+    width:100%;
+    height: 100%;
+    margin:10px;
+    border-radius:5px;
+}
+
+.popular-hotels .row .hotel-img{
+    width:100%;
+    height:83%;
+}
+
+.popular-hotels .hotels-btn {
+    position:relative;
+    margin:-98px -12px 10px;
+    background-color:#fff;
+    border-radius:0;
+    border-top:2px solid #F7B700;
+    border-right:2px solid #F7B700;
+    border-left:2px solid #F7B700;
+}
+
+.popular-hotels .btn a {
+    color: #fff;
+}
+
+.popular-hotels a:hover{
+    text-decoration:none;
+    color: #f7b700;
+}
+
+.popular-hotels a h5 {
+    margin:0.5px;
+}
+
+.popular-hotels a h5,h6{
+    color:#333
+}
+
+.popular-hotels div button {
+    margin-bottom:10px;
+}
+
+/*End Section popular hotels*/
+
+/*Start Popular Tour Guide */
+
+.tour-guide {
+    width:90%;
+    margin:80px auto 60px;
+}
+
+.tour-guide h3{
+    margin-bottom:20px;
+}
+
+.tour-guide .row > div {
+    background-color:#fff;
+    padding:20px;
+    border-radius:5px;
+}
+
+.tour-guide .row div img{
+    max-width: 68%;
+    margin: 10px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.tour-guide .row div p{
+    margin-bottom:0;
+    margin-top:10px;
+}
+
+.tour-guide .row div button{
+    margin-bottom:5px;
+}
+
+@media screen and (max-width: 1100px) {
+    .tour-guide .row div button {
+        width: 75%;
+    }
+}
+
+.tour-guide .row div .media-tour {
+    margin:15px;
+}
+
+.tour-guide .row div .media-tour i:hover {
+    cursor:pointer;
+    color:#F7B700;
+    transition:all .5s linear;
+}
+
+/*End Popular Tour Guide */
+
+/*Start Footer*/
+
+footer {
+    background-image:url("../image/slider/slider4.jpg");
+    margin-top:20px;
+    padding:10px;
+    line-height:2.3em;
+    padding:0;
+}
+
+footer .quick_link a{
+    color:#fff;
+}
+
+footer .quick_link a:hover{
+    text-decoration:none;
+    color:#F7B700;
+}
+
+footer .back-footer{
+    background-color:rgba(00,00,00,0.3);
+    padding:20px;
+}
+
+footer .row div {
+    margin:10px;
+    color:#fff;
+}
+
+footer .row .beto-know input{
+    padding:2px 8px;
+    border:0px;
+    border-radius:5px;
+    margin-bottom:5px;
+}
+
+footer .row div button {
+    padding:8px;
+    border:0;
+    margin-top:-7px;
+}
+
+footer hr {
+    background-color:#fff
+}
+
+footer .last {
+    color:#fff;
+    padding-bottom:40px;
+    padding-top:10px;
+}
+
+footer .last p{
+    float:left;
+    width:55%;
+    color:#F7B700;
+}
+
+footer .last ul {
+    width:40%;
+    float:right;
+}
+
+footer .last ul li {
+    display:inline-block;
+}
+
+footer .last ul li{
+    margin-right:3px;
+}
+
+footer .last ul li i:hover {
+    color:#F7B700;
+    cursor:pointer;
+    transition:all 1s linear;
+}
+
+@media screen and (max-width: 560px) {
+    footer .last ul {
+        width: 45%;
+    }
+}
+
+/*End Footer*/

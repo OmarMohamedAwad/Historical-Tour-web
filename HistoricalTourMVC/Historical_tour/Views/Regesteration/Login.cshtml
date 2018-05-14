@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+@{
+    Layout = "~/Views/Shared/_LayoutNav.cshtml";
+}
+
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/sign-book-style.css" />
+</head>
+<body>
+
+    <!-- start sign in -->
+
+    <section>
+
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-xs-10">
+                    <div class="signin-box ">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Login to our site</h3>
+                                <p>Enter your username and password to log on:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom text-center">
+                            <form role="form" action="Login" method="post" class="login-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-username">Username</label>
+                                    <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                </div>
+                                <input type="submit" class="btn btn-warning"value="Sign in!"/>
+                                <div style="color:white" class="text-center">Don't have account ?</div>
+                                <button type="button" class="butsign btn btn-dark"><a href="/Regesteration/Create" style="color:#fff">Sign up</a></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-lg-6 col-xs-10 social-login text-center">
+                    <h3>...or login with:</h3>
+                    <div class="social-login-buttons">
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fab fa-google-plus"></i> Google Plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--end sign in -->
+
+</body>
+</html>

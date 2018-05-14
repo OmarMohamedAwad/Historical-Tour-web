@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fontawesome-all.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/icon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+ 
+</head>
+<body>
+
+    <!--Start navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand logo" href="~/Home/Index">
+            <img src="~/image/iconLogos.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link hover_effect" href="~/Home/Index/1" style="color:#333">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover_effect" href="~/Place/GetPlaces/1">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/Hotel/GetHotels/?type=1">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/TourGuide/GetTourguides/?type=1">Tour Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/Regesteration/contactUs">Contact Us</a>
+                </li>
+
+            </ul>
+           
+            <form action="" class="search-form " >
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="" value="">
+                   
+                        <i id="search-icon" onclick="search()" class="fas fa-search fa-lg search form-control-feedback"></i>
+                    
+</div>
+            </form>
+            
+            <!--Partial Login-->
+            @Html.Partial("_Login")
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+    @RenderBody()
+
+    <!--Start Footer-->
+
+    <footer>
+        <div class="back-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg col-md-5 col-sm-5 mr-5">
+                        <h3>CONTACT Us</h3>
+                        <ul class="list-unstyled">
+                            <li>2150 Virginia Street, New York, NY 60154</li>
+                            <li>555-555-5555</li>
+                            <li>name@company.com</li>
+                        </ul>
+                        <button class="btn btn-warning"><a href="~/Regesteration/contactUs">Contact Us</a></button>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-5 quick_link">
+                        <h3>Quick Link</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="~/Place/GetPlaces/1">Places</a></li>
+                            <li><a href="~/Hotel/GetHotels/?type=1">Hotel</a></li>
+                            <li><a href="~/TourGuide/GetTourguides/?type=1">Tour Guides</a></li>
+                            <li><a href="~/Regesteration/contactUs">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg col-md-5 col-sm-12 beto-know">
+                        <h3>BE IN THE KNOW</h3>
+                        <p>Sign up for the latest news, tours and hotels</p>
+                        <input type="email" placeholder="Email" />
+                        <button class="btn btn-warning">Go</button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="container last">
+                <p>© 2018, Historical team</p>
+                <ul class="list-unstyled text-center">
+                    <li><i class="fab fa-facebook-square fa-2x"></i></li>
+                    <li><i class="fab fa-twitter-square fa-2x"></i></li>
+                    <li><i class="fas fa-phone-square fa-2x"></i></li>
+                    <li><i class="fab fa-snapchat-square fa-2x"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--End Footer-->
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script>
+        
+        var a = document.getElementById("search");
+        var my_bt = document.getElementById("search-icon");
+        my_bt.onclick = function () {
+
+            window.open("Hotel/Gethotel/"+a.value);
+        }
+
+       
+        a.addEventListener("keypress", function (event) {
+           
+            if (event.keyCode === 13) {
+                // Trigger the button element with a click
+                window.open("Hotel/Gethotel/" + a.value);
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNet.Identity
+@using Historical_tour.Controllers
+
+    @if (RegesterationController.myUser == null)
+    {
+        <ul class="user list-unstyled ">
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/Regesteration/Login"><i class="fas fa-sign-in-alt mr-3"></i>Sign in</a>
+                    <a class="dropdown-item" href="/Regesteration/Create"><i class="fas fa-user-plus mr-3"></i>Sign up</a>
+                </div>
+            </li>
+        </ul>
+
+    }
+    else
+    {
+        using (Html.BeginForm("Logout", "Regesteration", FormMethod.Post, new { id = "logoff" }))
+        {
+            @Html.AntiForgeryToken()
+            <ul class="user list-unstyled ">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-item">
+                            <a href="~/Regesteration/myprofile"><i class="fas fa-user mr-3"></i>My Profile</a>
+                            @*<i class="fas fa-user mr-3"></i>@Html.ActionLink("My Profile", "myprofile", "Regesteration")*@
+                        </div>
+                        <a class="dropdown-item" href="javascript:document.getElementById('logoff').submit()"><i class="fas fa-sign-out-alt mr-3"></i>Sign out</a>
+                    </div>
+                </li>
+            </ul>
+
+        }
+        
+    }

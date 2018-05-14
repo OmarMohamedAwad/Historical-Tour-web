@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fontawesome-all.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/icon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+ 
+</head>
+<body>
+
+    <!--Start navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand logo" href="~/Home/Index">
+            <img src="~/image/iconLogos.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link hover_effect" href="~/Home/Index/1" style="color:#333">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link hover_effect" href="~/Place/GetPlaces/1">Places</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/Hotel/GetHotels/?type=1">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/TourGuide/GetTourguides/?type=1">Tour Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled hover_effect" href="~/Regesteration/contactUs">Contact Us</a>
+                </li>
+
+            </ul>
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" name="search" id="search" placeholder="">
+                    <i id="search-icon" onclick="search()" class="fas fa-search fa-lg search form-control-feedback"></i>
+                </div>
+            </form>
+            <!--Partial Login-->
+            @Html.Partial("_Login")
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+    @RenderBody()
+    
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+</body>
+</html>

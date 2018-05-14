@@ -1,0 +1,205 @@
+﻿@model IEnumerable<IEnumerable<Historical_tour.Models.TourGuide>>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/tourguides-style.css" />
+</head>
+<body>
+
+    <!--Start Section Filter-->
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show ">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort Rate
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width: 100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="~/TourGuide/Sorting/?typeOrder=1">From Down To Up</a>
+                            <a class="dropdown-item" href="~/TourGuide/Sorting/?typeOrder=2">From Up To Down</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ID
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="~/TourGuide/Sorting/1">From Down To Up</a>
+                            <a class="dropdown-item" href="~/TourGuide/Sorting/1">From Up To Down</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Type
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="#">Male</a>
+                            <a class="dropdown-item" href="#">Female</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-6">
+                    <div class="dropdown show">
+                        <a class="dropdown-toggle btn" href="#" role="button" id="dropdownMenuLink" style="border: 2px solid #F7B700; width: 100%;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Experiance
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:100%; margin:auto; text-align:center;">
+                            <a class="dropdown-item" href="~/Place//Sorting/1">From Down To Up</a>
+                            <a class="dropdown-item" href="~/Place//Sorting/2">From Up To Down</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--End Section Filter-->
+
+    <!--Start Section Tour Guides-->
+
+    <div class="content" style="max-width:100%">
+
+        <section class="tourguides">
+            <div class="container">
+
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <div class="row text-center">
+
+                        @for (int j = 0; j < Model.ElementAt(i).Count(); j++)
+                        {
+
+                            if (Model.ElementAt(i).Count() == 4)
+                            {
+                                
+                                try
+                                {
+                                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 tour-guide1" style="background-image: url(@(Model.ElementAt(i).ElementAt(j).Image))">
+                                        <div class="container_tourguides">
+                                            <div>
+                                                <img src="@Model.ElementAt(i).ElementAt(j).Image"/>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    @Model.ElementAt(i).ElementAt(j).Name <br/>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Address: @Model.ElementAt(i).ElementAt(j).Address<br/>
+                                                    Language : Arabic<br/>
+                                                    Rate&ensp;&ensp;:@Model.ElementAt(i).ElementAt(j).Rate
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-warning "><a href="/TourGuide/GetTourGuide/@Model.ElementAt(i).ElementAt(j).ID">See More</a></button>
+                                                <button class="btn btn-warning "><a href="/TourGuide/booking/@Model.ElementAt(i).ElementAt(j).ID">Booking</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                catch
+                                {
+                                    <div class="col-lg col-md-5 col-sm-5 mr-3 mb-3 tour-guide1">
+                                        <div class="container_tourguides">
+                                            <img src="~/image/tour guides/tourguide1.png"/>
+                                            <p>
+                                                @Model.ElementAt(i).ElementAt(j).Name <br/>
+                                            </p>
+                                            <p>
+                                                Address: @Model.ElementAt(i).ElementAt(j).Address<br/>
+                                                Language : Arabic<br/>
+                                                Rate&ensp;&ensp;:@Model.ElementAt(i).ElementAt(j).Rate
+                                            </p>
+
+                                            <button class="btn btn-warning "><a href="/TourGuide/GetTourGuide/@Model.ElementAt(i).ElementAt(j).ID">See More</a></button>
+                                            <button class="btn btn-warning "><a href="/TourGuide/booking/@Model.ElementAt(i).ElementAt(j).ID">Booking</a></button>
+                                        </div>
+                                    </div>
+                                }
+
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    <div class="col-lg-3 col-md-5 col-sm-5 mr-3 mb-3 tour-guide1" style="background-image: url(@(Model.ElementAt(i).ElementAt(j).Image))">
+                                        <div class="container_tourguides">
+                                            <div>
+                                                <img src="@Model.ElementAt(i).ElementAt(j).Image" />
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    @Model.ElementAt(i).ElementAt(j).Name <br />
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p>
+                                                    Address: @Model.ElementAt(i).ElementAt(j).Address<br />
+                                                    Language : Arabic<br />
+                                                    Rate&ensp;&ensp;:@Model.ElementAt(i).ElementAt(j).Rate
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-warning "><a href="/TourGuide/GetTourGuide/@Model.ElementAt(i).ElementAt(j).ID">See More</a></button>
+                                                <button class="btn btn-warning "><a href="/TourGuide/booking/@Model.ElementAt(i).ElementAt(j).ID">Booking</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                catch
+                                {
+                                    <div class="col-lg-3 col-md-5 col-sm-5 mr-3 mb-3 tour-guide1">
+                                        <div class="container_tourguides">
+                                            <img src="~/image/tour guides/tourguide1.png" />
+                                            <p>
+                                                @Model.ElementAt(i).ElementAt(j).Name <br />
+                                            </p>
+                                            <p>
+                                                Address: @Model.ElementAt(i).ElementAt(j).Address<br />
+                                                Language : Arabic<br />
+                                                Rate&ensp;&ensp;:@Model.ElementAt(i).ElementAt(j).Rate
+                                            </p>
+
+                                            <button class="btn btn-warning "><a href="/TourGuide/GetTourGuide/@Model.ElementAt(i).ElementAt(j).ID">See More</a></button>
+                                            <button class="btn btn-warning "><a href="/TourGuide/booking/@Model.ElementAt(i).ElementAt(j).ID">Booking</a></button>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                }
+
+            </div>
+        </section>
+
+    </div>
+
+    <!--End Section Tour Guides-->
+
+    <script src="~/Scripts/tourguides-item-js.js"></script>
+
+</body>
+</html>

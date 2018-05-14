@@ -1,0 +1,56 @@
+﻿@using Historical_tour.Controllers
+
+<div id="wrapper">
+    <div class="sidenav boxscroll do-nicescroll4  " id="sidebar">
+        <div class="sidebar-header">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> <i class="fa fa-angle-left" style="color:white; font-size:30px; float:right; padding-right:15px; padding-top:40px; " i> </i></a>
+            <h3 style="font-family: 'Carter One', cursive; "> Governorates</h3>
+        </div>
+
+        <div class="">
+            <ul class="list-unstyled components collabsible collabsible-accordion">
+                <li class="">
+                    <form class="srchnav search-sidbar" role="search">
+                        <div class="form">
+                            <input type="text" class="form-control" placeholder="Search for a place" style="">
+                        </div>
+                    </form>
+                </li>
+
+                <hr style="color:white; border:1px solid;">
+
+                @if (Request.Url.ToString().ToLower().Contains("GetPlace".ToLower()))
+                {
+                    <li class="">
+                        <a href="#cairoSubmenu" data-toggle="collapse" aria-expanded="false">Cairo <i class="govdown fa fa-angle-down"></i> </a>
+                        <ul class="collapse list-unstyled" id="cairoSubmenu">
+                            @for (int i = 0; i < PlaceController.places.Count; i++)
+                            {
+                                <li><a href="/Place/GetPlace/@PlaceController.places.ElementAt(i).Id">@PlaceController.places.ElementAt(i).Name</a></li>
+                            }
+
+                        </ul>
+                    </li>
+                }
+                else if (Request.Url.ToString().ToLower().Contains("GetHotel".ToLower()))
+                {
+                    <li class="">
+                        <a href="#cairoSubmenu" data-toggle="collapse" aria-expanded="false">Cairo <i class="govdown fa fa-angle-down"></i> </a>
+                        <ul class="collapse list-unstyled" id="cairoSubmenu">
+                            @for (int i = 0; i < HotelController.hotels.Count; i++)
+                            {
+                                <li><a href="/Hotel/Gethotel/@HotelController.hotels.ElementAt(i).Id">@HotelController.hotels.ElementAt(i).Name</a></li>
+                            }
+
+                        </ul>
+                    </li>
+                }
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- end Side bar -->

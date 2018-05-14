@@ -1,0 +1,290 @@
+/*Start Section most places*/
+
+body {
+    overflow-x: hidden;
+}
+
+.user-link {
+    color: #fff;
+}
+
+.user-link:hover {
+    color: #333;
+    text-decoration:none
+}
+
+.mostplaces
+{
+    margin-right:50px;
+     border: 1px solid #DDD;
+     width: 90%;
+     margin-top: 20px;
+     background-color: #fafcfa;
+     border-radius: 10px;
+     padding: 10px;
+     padding-top: 1px;
+}
+
+.places 
+{
+    width:100%;
+    margin:80px auto 30px;
+}
+
+.places h3
+{
+    margin-bottom:20px;
+}
+
+.places .row 
+{
+    margin-bottom:20px;
+}
+
+.places .row > div 
+{
+    background-color:#fff;
+    border-radius:5px;
+    padding:0;
+    box-shadow:3px 3px 10px #333;
+    color:#fff
+}
+
+.places .row > div:hover
+{
+    cursor:pointer;
+}
+
+.places .row > div .container_place
+{
+    background-color:rgba(00,00,00,.5);
+    padding:20px;
+    border-radius:5px;
+    height:100%;
+}
+
+.places .row .alazhar 
+{
+    background-image:url(../image/pouplar/4.jpg);
+    background-position:center;
+}
+
+.places .row .citadelof-qaitbay
+{
+    background-image:url(../image/pouplar/1.jpg);
+    background-position:center;
+}
+
+.places .row .pyramids
+{
+    background-image:url(../image/pouplar/6.jpg);
+    background-position:center;
+}
+
+.places .row .slah
+{
+    background-image:url(../image/pouplar/2.jpg);
+    background-position:center;
+}
+
+.places .row div img
+{
+    max-width:100%;
+    border-radius: 100%;
+    margin:10px;
+}
+
+.places .row div p
+{
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.places .row div button{
+    margin-bottom:5px;
+}
+
+/*most places */
+
+/*tab*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 28px;
+    transition: 0.25s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {    
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+  @media (min-width: 992px) {
+      #sideNav {
+          background-color:#F7B700;
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          width: 17rem;
+          height: 100vh;
+      }
+      #sideNav .user-photo {
+          display: flex;
+          margin: auto auto 0;
+          padding: 0.5rem;
+      }
+      #sideNav .user-photo .img-profile {
+          max-width: 10rem;
+          max-height: 10rem;
+          border: 0.5rem solid rgba(255, 255, 255, 0.2);
+      }
+      #sideNav .user-item {
+          display: flex;
+          align-items: flex-start;
+          flex-grow: 0;
+          width: 100%;
+          margin-bottom: auto;
+      }
+      #sideNav .user-item .user-nav {
+          flex-direction: column;
+          width: 100%;
+      }
+      #sideNav .user-item .user-nav .user-element {
+          display: block;
+      }
+      #sideNav .user-item .user-nav .user-element .nav-link {
+          display: block;
+      }
+  }
+
+  @media (max-width: 992px) {
+      #sideNav {
+          display:none
+      }
+  }
+
+/* List */
+
+ul {
+		list-style: disc;
+		margin: 0 0 2em 0;
+		padding-left: 0em;
+	}
+
+ul.actions {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+/* Button */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	background-color: transparent;
+	border-radius: 0.35em;
+	border: solid 3px #efefef;
+	color: #787878 !important;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	height: 3.15em;
+	height: calc(2.75em + 6px);
+	line-height: 2.75em;
+	min-width: 10em;
+	padding: 0 1.5em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+		border-color: #F7B700;
+		color: #F7B700 !important;
+}
+
+/* Main */
+
+	#main {
+       
+		margin-left: 22%;
+		max-width: 72em;
+		padding: 8em 4em 4em 4em;
+	
+	}
+
+		#main > section {
+			border-top: solid 2px #efefef;
+			margin: 0em 0 0 0;
+           
+			padding: 2em 0 0 0;
+		}
+
+			#main > section:first-child {
+				border-top: 0;
+				margin-top: auto;
+				padding-top: 0;
+			}
+
+/* Medium */
+
+@media screen and (max-width: 980px) {
+		#main {
+			margin: 0;
+			padding: 6em 4em;
+			width: 100%;
+		}
+
+}
+
+/* Small */
+
+@media screen and (max-width: 736px) {
+		#main {
+			padding: 2.25em 1.5em 0.25em 1.5em;
+		}
+
+			#main > section {
+				margin: 2.25em 0 0 0;
+				padding: 2.25em 0 0 0;
+			}
+}

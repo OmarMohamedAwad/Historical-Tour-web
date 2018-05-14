@@ -1,0 +1,116 @@
+﻿@model Historical_tour.Models.TourGuide
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="~/Content/tour-style.css" />
+</head>
+<body>
+
+    <!-- Start tourist header -->
+
+    <header class="text-center">
+
+        <div class="info row ">
+            <div class="col-md-4 col-sm-5 col-xs-12 text-center">
+                <div class="personal">
+                    <img src=@Model.Image />
+                    <h3>@Model.UserName</h3>
+                    <button type="button" class="btn btn-warning">Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="vl  hidden-xs  hidden-md hidden-sm"></div>
+
+            <div class="col-md-8 col-sm-7 col-xs-12 text-center">
+                <div class="table_info">
+                    <table class="table">
+
+                        <tbody>
+                            <tr>
+                                <td>Address</td>
+                                <td>@Model.Address</td>
+                            </tr>
+                            <tr>
+                                <td> Phone Number</td>
+                                <td> @Model.Phone</td>
+                            </tr>
+                            <tr>
+                                <td> E-mail Address</td>
+                                <td>@Model.Email</td>
+                            </tr>
+                            <tr>
+                                <td>   Gender</td>
+                                @if (@Model.Gender == 1)
+                                {
+                                    <td>Male</td>
+                                }
+                                else
+                                {
+                                    <td>Female</td>
+                                }
+
+                            </tr>
+                            <tr>
+                                <td>  Age </td>
+
+                                <td>@(DateTime.Now.Year - Model.Birthday.Value.Year)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <hr style="border:0.5px solid #fff;">
+
+        <!-- start tabs -->
+
+        <div class="featur text-center">
+            <div class="row">
+
+                <div class="col-lg col-md-3 col-sm-6">
+                    <div class="statm">
+                        <i class="fa fa-users fa-5x"></i>
+                        <p>12</p>
+                        <span>Tourist Booking With him</span>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-sm-6">
+                    <div class="statm">
+                        <i class="fas fa-hourglass-end fa-5x"></i>
+                        <p>@Model.ExeprienceYear</p>
+                        <span>Experience Years</span>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-sm-6">
+                    <div class="statm">
+                        <i class="fas fa-globe fa-5x"></i>
+                        <p>Langauge</p>
+                        <span>Arabic,English</span>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-3 col-sm-6">
+                    <div class="statm instraction">
+                        <i class="fas fa-comments fa-5x"></i>
+                        <p>85%</p>
+                        <span> Speaker Skills</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End tabs -->
+    <!--End Tourist Heeder-->
+
+</body>
+</html>

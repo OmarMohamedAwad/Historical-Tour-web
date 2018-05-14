@@ -1,0 +1,130 @@
+/* start general code */
+
+body {
+    padding-top:75px;
+    background-color:#333;
+    font-family: 'Acme', sans-serif;
+}
+
+/* end general code */
+
+
+/* start header */
+
+header
+{
+    min-height:600px;
+    padding-left:30px;
+    padding-right:20px; 
+    margin-bottom:10px; 
+}
+
+header .info
+ {
+    width:100%;
+    padding-top:90px; 
+    color:#fff;
+ }
+
+header .info .personal{
+    padding-left:0 ;
+    margin-right: 0px;
+}
+
+.personal img {
+    width: 35%;
+    height: 145px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.btnn
+{
+ margin-top: 15px;
+ color: white;
+ background-color: #F54785;
+}
+
+.vl 
+{
+   border-left: 1px solid white;
+   height: 403px;
+   position:absolute;
+   overflow: hidden;
+   margin-top: -60px;
+   margin-left: 380px;
+} 
+
+@media screen and (max-width: 1100px) {
+    .vl  {
+        display:none;
+    }
+}
+
+h3
+{
+ color: white;
+}
+
+header .info .table_info {
+    width:100%; 
+    padding-top:40px;
+    padding-left:30px;
+    text-align:center;
+}
+
+.table {
+    width:80%; 
+}
+
+table
+{
+  color: white; 
+}
+
+header hr
+{
+    margin-top:40px; 
+    margin-bottom:20px 
+}
+
+header .featur{
+    padding:20px;
+}
+
+header .statm p{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:0;
+    margin-top:10px;
+    width:100%; 
+}
+
+header .statm span{
+    font-size:18px; 
+} 
+
+header .row .instraction p
+{
+    margin-top:15px; 
+}
+
+header .row .statm
+{
+    color:white;
+    margin-bottom:20px; 
+}
+
+header .row .statm:hover
+{
+    color:#F7B700;
+    cursor:pointer;
+    transition:all .5s ease-in-out;
+    -webkit-transition:all .5s ease-in-out; 
+    -moz-transition:all .5s ease-in-out; 
+    -o-transition:all .5s ease-in-out; 
+    
+}
+
+/* end header */
+
